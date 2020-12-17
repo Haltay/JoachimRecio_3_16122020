@@ -1,0 +1,129 @@
+
+// Police
+
+.logo, h1, h2, h3
+{
+    font-family: 'Shrikhand', cursive, sans-serif;
+}
+
+a
+{
+    color: #000000;
+    text-decoration: none;    
+}
+
+html
+{
+    color: black;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #ffffff;
+}
+
+@import "./sass/utils/mixin";
+
+// color
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-background-search: #eaeaea;
+
+// header
+
+header
+{
+    width: 100%;
+    padding-top: 3%;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo
+{   
+    width: 40%;
+    margin: auto; 
+    padding-bottom: 1.5%;   
+}
+
+//Search
+.search
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-background-search;
+    height: 3em;
+    border-top: 2px solid #cfcfcf; 
+}
+
+.search-font{
+    padding-left: 20%;
+    padding-right: 5%;
+        .fas{
+            color: #353535;
+            }
+}           
+
+#town
+{   
+    font-size: 0.85em;
+    font-weight: bolder;
+    border: none;
+    background-color: $color-background-search;
+}
+
+
+// Accroche and button
+    // Accroche
+.btn-accueil{
+    background-color: #f6f6f6;
+    padding-top: 9%;
+
+        .title_text{
+            margin-top: 0;
+            font-size: 1.5em;
+            font-weight: bolder;
+            width: 60%;
+            @include center-object;        
+            }
+
+        p{
+            font-size: 1.1em;
+            @include center-object;              
+        }
+}
+    // Button
+.btn-accueil-explore
+{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding-top: 2%;
+    padding-bottom: 10%;
+    @include center-div;
+
+        input{
+          width: 55%;  
+          height: 80%;
+          border-radius: 30px;
+          background-image:linear-gradient(to top, $color-primary, $color-secondary);;
+          color: white;
+          font-size: 1em;
+          border: none;
+        }
+    
+
+}
+

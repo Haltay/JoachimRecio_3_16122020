@@ -1,0 +1,119 @@
+.logo, h1, h2, h3 {
+  font-family: 'Shrikhand', cursive, sans-serif;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+html {
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #ffffff;
+}
+
+header {
+  width: 100%;
+  padding-top: 3%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logo {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 1.5%;
+}
+
+.search {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eaeaea;
+  height: 3em;
+  border-top: 2px solid #cfcfcf;
+}
+
+.search-font {
+  padding-left: 20%;
+  padding-right: 5%;
+}
+
+.search-font .fas {
+  color: #353535;
+}
+
+#town {
+  font-size: 0.85em;
+  font-weight: bolder;
+  border: none;
+  background-color: #eaeaea;
+}
+
+.btn-accueil {
+  background-color: #f6f6f6;
+  padding-top: 9%;
+}
+
+.btn-accueil .title_text {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: bolder;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-accueil p {
+  font-size: 1.1em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-accueil-explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-accueil-explore input {
+  width: 55%;
+  height: 80%;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  color: white;
+  font-size: 1em;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
