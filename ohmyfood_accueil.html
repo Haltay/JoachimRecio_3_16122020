@@ -16,7 +16,7 @@
 
     <!-- Police -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap" rel="stylesheet">
             
     <!-- Pour Font Awesome  -->
         <script src="https://kit.fontawesome.com/9e03e7945a.js" crossorigin="anonymous"></script> 
@@ -57,41 +57,49 @@
 
         <!-- manual -->
         <section class="manual">
+
             <p class="title_text">Fonctionnement</p>
+
             <div class="manual-card">
                 <div class="manual-card_number">
                     1
                 </div>
-                <div class="manual-card_font">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="manual-card_text">
-                    Choisissez un restaurant
+                <div class="manual-card-ft">
+                    <div class="manual-card-ft_font">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="manual-card-ft_text">
+                        Choisissez un restaurant
+                    </div>
                 </div>
             </div>
 
-            <div class="manual-card"></div>
+            <div class="manual-card">
                 <div class="manual-card_number">
                     2
                 </div>
-                <div class="manual-card_font">
-                    <i class="fas fa-list"></i>
+                <div class="manual-card-ft">
+                    <div class="manual-card-ft_font">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="manual-card-ft_text">
+                        Composez votre menu
+                    </div>
                 </div>
-                <div class="manual-card_text">
-                    Composez votre menu
-                </div>                
             </div>
 
             <div class="manual-card">
                 <div class="manual-card_number">
                     3
                 </div>
-                <div class="manual-card_font">
-                    <i class="fas fa-store"></i>
-                </div>
-                <div class="manual-card_text">
-                    Dégustez au restaurant
-                </div>                
+                <div class="manual-card-ft">
+                    <div class="manual-card-ft_font">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="manual-card-ft_text">
+                        Dégustez au restaurant
+                    </div> 
+                </div>              
             </div>
         </section>
 
@@ -111,9 +119,13 @@
                  </div>
 
                  <div class="restau-card-name">
-                        <p class="restau-card-name_title">La palette du goût</p>
-                        <p>Ménilmontant</p>
-                        <p> <span class="heart"><i class="far fa-heart"></i></span> </p>
+                        <div class="restau-card-name-title">
+                            <p class="restau-card-name_title">La palette du goût</p>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="restau-card-icon"></div>
+                            <p><span class="heart"><i class="far fa-heart fa-2x"></i></span> </p>
+                        </div>
                  </div>
                 </a>
                 </div>
@@ -126,9 +138,13 @@
                      </div>
     
                      <div class="restau-card-name">
-                            <p class="restau-card-name_title">La note enchantée</p>
-                            <p>Charonne</p>
-                            <p> <span class="heart"><i class="far fa-heart"></i></span> </p>
+                            <div class="restau-card-name-title">
+                                <p class="restau-card-name_title">La note enchantée</p>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="restau-card-icon"></div>
+                                <p> <span class="heart"><i class="far fa-heart fa-2x"></i></span> </p>
+                            </div>
                      </div>
                     </a>
                     </div>
@@ -141,9 +157,13 @@
                         </div>
     
                         <div class="restau-card-name">
-                            <p class="restau-card-name_title">À la française</p>
-                            <p>Cité Rouge</p>
-                            <p> <span class="heart"><i class="far fa-heart"></i></span> </p>
+                            <div class="restau-card-name-title">
+                                <p class="restau-card-name_title">À la française</p>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div class="restau-card-icon"></div>
+                                <p> <span class="heart"><i class="far fa-heart fa-2x"></i></span> </p>
+                            </div>
                         </div>
                     </a>
                     </div>
@@ -156,9 +176,13 @@
                         </div>
     
                         <div class="restau-card-name">
-                            <p class="restau-card-name_title">Le délice des sens</p>
-                            <p>Folie-Méricourt</p>
-                            <p> <span class="heart"><i class="far fa-heart"></i></span> </p>
+                            <div class="restau-card-name-title">
+                                <p class="restau-card-name_title">Le délice des sens</p>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="restau-card-icon"></div>
+                                <p> <span class="heart"><i class="far fa-heart fa-2x"></i></span> </p>
+                            </div>
                         </div>
                     </a>
                     </div>
@@ -166,23 +190,23 @@
 
         <footer>
             <div class="about">
-                <h2>ohmyfood</h2>
-                <div class="about-list">
+                <p id="about-title">ohmyfood</p>
 
+                <div class="about-list">
                     <div class="about-list-font">
                         <div class="about-list_font">
                             <i class="fas fa-utensils"></i>
                         </div>
-                        <div class="about-list_text">
+                        <div class="about-list_text proposition">
                             Proposer un restaurant
                         </div> 
                     </div> 
 
                     <div class="about-list-font">
                         <div class="about-list_font">
-                            <i class="fas fa-hands-helping"></i>
+                            <i class="fas fa-hands-helping fa-xs"></i>
                         </div>
-                        <div class="about-list_text">
+                        <div class="about-list_text partner">
                             Devenir partenaire
                         </div> 
                     </div> 

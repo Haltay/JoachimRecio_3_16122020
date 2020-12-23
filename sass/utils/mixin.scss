@@ -11,3 +11,15 @@
     justify-content: center;
     align-items: center;    
 }
+
+
+// Pour titre
+@mixin title-accueil {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+// Box-shadow
+@mixin box-shadow {    
+    box-shadow: 5px 15px 21px -13px #000000;
+}
