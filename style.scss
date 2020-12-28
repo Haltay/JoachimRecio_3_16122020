@@ -205,6 +205,7 @@ p.title_text
 .restau-card{
     .restau-card-img{
         width: 170px;
+        display: flex;
     }
         .restau-card_img{
             width: 100%;
@@ -214,8 +215,29 @@ p.title_text
             object-fit: cover;
             overflow: hidden;
             border-radius: 20px;
+            z-index: 1;
         }
 
+        .restau-card-new{
+            height: 100%;
+            width: auto;
+            padding: 4% 6% 4% 6%;
+            margin-top: 10%;
+            margin-left: -55%;
+            font-weight: bold;
+            background-color: $color-background-new;
+            color: $color-background-new_title;
+            z-index: 2;
+            border-radius: 5%;
+        }
+
+        #restau-card-nonew{
+            display: none;
+        }
+}
+
+
+.restau-card{
     .restau-card-name{
         width: 300px;
         display: flex;
@@ -229,12 +251,51 @@ p.title_text
         }
 }
 
-.heart i
-{
-    padding-top: 8px;
-    padding-left: 100px;
-    font-weight: 100;
+
+
+.button-heart{
+    background: none;
+    border: none;   
 }
+
+
+/*
+ .fa-heart{
+        padding-top: 8px;
+        padding-left: 100px;
+        font-weight: 100;        
+        
+    }  
+
+    .fa-heart i {
+        stroke-width: 2px;
+    }
+  
+    .fa-heart:hover {
+   stroke: black;
+   fill: blue;
+ }
+
+
+*/
+
+
+.fa-heart {
+    background-color: white;
+}
+
+.fa-heart::before {
+    content: url(images/font/heart-full.svg);
+    color: white;
+    transition: color 1s ease-out;
+}
+
+.fa-heart:hover::before{
+    font-weight: 800;
+    color: red;
+    
+}
+
 
 
 // Footer
@@ -271,8 +332,23 @@ footer
 
     .about-list-nofont{
         padding-bottom: 3%;
-        padding-left: 0;
+        margin-left: -3%;
         color: #f2f2f2;
     }
 }
 
+// Page A la Française
+
+//header
+
+.header-alafrancaise{
+display: flex;
+}
+
+.arrowback
+{    width: 10%;
+    color: $color-arrow-left;
+    padding-left: 8%; 
+    margin-bottom: -20px; 
+    
+}
