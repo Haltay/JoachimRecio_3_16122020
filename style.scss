@@ -89,7 +89,7 @@ img
 
         .title_text{
             margin-top: 0;           
-            width: 60%;
+            width: 70%;
             @include title-accueil;
             @include center-object;        
             }
@@ -245,8 +245,7 @@ p.title_text
         padding-left: 13px;        
     }
         .restau-card-name_title{
-            font-size: 1.2em;
-            font-weight: bolder;
+            @include title-in-card; 
             margin-bottom: -5px;                
         }
 }
@@ -280,11 +279,11 @@ p.title_text
 */
 
 
-.fa-heart {
+.fa-heart{
     background-color: white;
 }
 
-.fa-heart::before {
+.fa-heart::before{
     content: url(images/font/heart-full.svg);
     color: white;
     transition: color 1s ease-out;
@@ -308,11 +307,11 @@ footer
     width: 100%;
 }
 
-.about {    
+.about{    
     padding-top: 2%;
     padding-left: 6%;
 
-    p {
+    p{
         font-family: 'Shrikhand', cursive, sans-serif;
         font-size: 1.2em;
     }
@@ -341,14 +340,67 @@ footer
 
 //header
 
-.header-alafrancaise{
-display: flex;
+.header-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .arrowback{   
+        width: auto;
+        color: $color-arrow-left;
+        margin: -10px -50px 0 30px;            
+    }       
 }
 
-.arrowback
-{    width: 10%;
-    color: $color-arrow-left;
-    padding-left: 8%; 
-    margin-bottom: -20px; 
+.menu
+{
+    display: flex;
+    flex-direction: column;
+       
+}
+
+.menu-restau
+{
+    background-color: $color-background-grey;
+    margin-top: -13%;
+    border-radius: 30px 30px 0 0;
+}
+
+.menu-restau-title{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+}
+
+.menu-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+    margin-bottom: 10%;
+
+    .menu-card_title{
+        width: 13%;
+        font-size: 1.2em;
+        margin-bottom: 5%;
+        padding-bottom: 1%;
+        border-bottom: solid $color-tertiary 2px;
+
+    }
+
+    .menu-card-plat{
+        @include menu-card-plat;
+        @include box-shadow;}
+
+        .menu-card-plat-name_name{
+            margin-bottom: 0;
+            @include title-in-card; 
+        }
+
+        .menu-card-plat-name_description{
+            margin-top: 0;
+            padding-top: 3%;
+        }
     
 }
+    

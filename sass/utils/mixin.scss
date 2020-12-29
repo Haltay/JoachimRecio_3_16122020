@@ -12,14 +12,32 @@
     align-items: center;    
 }
 
+//Tailles de police
+    // Taille pour titre
+    @mixin title-accueil {
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
 
-// Pour titre
-@mixin title-accueil {
-    font-size: 1.5em;
-    font-weight: bolder;
-}
+    // Taille police dans card (titre)
+    @mixin title-in-card{
+        font-size: 1.2em;
+        font-weight: bolder;
+    }
 
 // Box-shadow
 @mixin box-shadow {    
     box-shadow: 5px 15px 21px -13px #000000;
+}
+
+// contenu des cards de menu
+@mixin menu-card-plat {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 4% 0 3%;
+    
 }

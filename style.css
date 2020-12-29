@@ -75,7 +75,7 @@ img {
 
 .btn-accueil .title_text {
   margin-top: 0;
-  width: 60%;
+  width: 70%;
   font-size: 1.5em;
   font-weight: bolder;
   text-align: center;
@@ -346,16 +346,97 @@ footer {
   color: #f2f2f2;
 }
 
-.header-alafrancaise {
+.header-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.arrowback {
-  width: 10%;
+.header-card .arrowback {
+  width: auto;
   color: #353535;
-  padding-left: 8%;
-  margin-bottom: -20px;
+  margin: -10px -50px 0 30px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-restau {
+  background-color: #f6f6f6;
+  margin-top: -13%;
+  border-radius: 30px 30px 0 0;
+}
+
+.menu-restau-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5% 0 5%;
+}
+
+.menu-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 5% 0 5%;
+  margin-bottom: 10%;
+}
+
+.menu-card .menu-card_title {
+  width: 13%;
+  font-size: 1.2em;
+  margin-bottom: 5%;
+  padding-bottom: 1%;
+  border-bottom: solid #99E2D0 2px;
+}
+
+.menu-card .menu-card-plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 6%;
+  padding: 0 4% 0 3%;
+  -webkit-box-shadow: 5px 15px 21px -13px #000000;
+          box-shadow: 5px 15px 21px -13px #000000;
+}
+
+.menu-card .menu-card-plat-name_name {
+  margin-bottom: 0;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.menu-card .menu-card-plat-name_description {
+  margin-top: 0;
+  padding-top: 3%;
 }
 /*# sourceMappingURL=style.css.map */

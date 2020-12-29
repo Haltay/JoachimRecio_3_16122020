@@ -31,12 +31,12 @@
     <main>
 
         <!-- Header -->
-        <header id="header-alafrançaise">
-            <a href="ohmyfood_accueil.html">
-                <div class="arrowback">
-                    <i class="fas fa-arrow-left fa-lg"></i>
-                </div>
-            </a>
+        <header class="header-card">
+            <div class="arrowback">
+                <a href="ohmyfood_accueil.html">                
+                    <i class="fas fa-arrow-left fa-lg"></i>                
+                </a>
+            </div>
 
             <div class="logo">
                 <img src="images/logo/ohmyfood@2x.svg" class="logo_img" alt="Ohmyfood! Trouvez votre bonheur sans attendre">
@@ -51,52 +51,116 @@
       
         <!-- Menu -->
         <section class="menu"> 
-            <img src="images/restaurants/alafr.jpg" class="restau-card_img" alt="À la française">
+            <img src="images/restaurants/alafr.jpg" class="restau_img" alt="À la française">
 
-            <div class="menu-card">
-                <div class="menu-card-title">
-                    <div class="menu-card-title_title">À la française</div>
-                    <div class="menu-card-title_icon"> <p><button id="button" class="button-heart"><i class="far fa-heart fa-2x"></i></button></p></div>                    
+            <div class="menu-restau">
+                <div class="menu-restau-title">
+                    <h1 class="menu-restau-title_title">À la française</h1>
+                    <div class="menu-restau-title_icon"> <p><button id="button" class="button-heart"><i class="far fa-heart fa-2x"></i></button></p></div>                    
                 </div>
 
-                <div class="menu-card-entrees">
-                    <div class="menu-card-entrees_title">ENTREES</div>
-
-                    <div class="menu-card-entrees-plat">
-                        <div class="menu-card-entrees-plat-name">
-                            <p class="menu-card-entrees-plat-name_name">Tartare de poulpe acidulé</p>
-                            <p class="menu-card-entrees-plat-name_description">Aux zests d'orange</p>
+                <div class="menu-card">
+                    <div class="menu-card_title">ENTREES</div>
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Tartare de poulpe acidulé</p>
+                            <p class="menu-card-plat-name_description">Aux zests d'orange</p>
                         </div>
-
-                        <div class="menu-card-entrees-plat-price">
-                            <p class="menu-card-entrees-plat-price_money">25€</p>
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">25€</p>
                         </div>
                     </div>
 
-                    <div class="menu-card-entrees-plat">
-                        <div class="menu-card-entrees-plat-name">
-                            <p class="menu-card-entrees-plat-name_name">Velouté de légumes d'antan</p>
-                            <p class="menu-card-entrees-plat-name_description">Carotte, panais, topinambour</p>
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Velouté de légumes d'antan</p>
+                            <p class="menu-card-plat-name_description">Carotte, panais, topinambour</p>
                         </div>
-
-                        <div class="menu-card-entrees-plat-price">
-                            <p class="menu-card-entrees-plat-price_money">35€</p>
-                        </div>
-                    </div>
-
-                    <div class="menu-card-entrees-plat">
-                        <div class="menu-card-entrees-plat-name">
-                            <p class="menu-card-entrees-plat-name_name">Soupe à l'oignon</p>
-                            <p class="menu-card-entrees-plat-name_description">Revisitée</p>
-                        </div>
-
-                        <div class="menu-card-entrees-plat-price">
-                            <p class="menu-card-entrees-plat-price_money">20€</p>
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">35€</p>
                         </div>
                     </div>
 
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Soupe à l'oignon</p>
+                            <p class="menu-card-plat-name_description">Revisitée</p>
+                        </div>
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">20€</p>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="menu-card">
+                    <div class="menu-card_title">PLATS</div>    
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Coquilles Saint-Jacques</p>
+                            <p class="menu-card-plat-name_description">Accompagnées d'une purée de panais</p>
+                        </div>    
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">40€</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Magret de canard</p>
+                            <p class="menu-card-plat-name_description">Et parmentier de pommes de terre</p>
+                        </div>                                
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">35€</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Pigeonneau d’Ille-et-Vilaine</p>
+                            <p class="menu-card-plat-name_description">Sur son lit de gnocchis aux légumes</p>
+                        </div>    
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">44€</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card_title">DESSERTS</div>    
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Pétales de violettes glacés</p>
+                            <p class="menu-card-plat-name_description">Et purée de noisettes</p>
+                        </div>    
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">18€</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Fondant au chocolat</p>
+                            <p class="menu-card-plat-name_description">Revisité</p>
+                        </div>                                
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">22€</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card-plat">
+                        <div class="menu-card-plat-name">
+                            <p class="menu-card-plat-name_name">Millefeuille croustillant</p>
+                            <p class="menu-card-plat-name_description">Myrtilles et pâte d’amande</p>
+                        </div>    
+                        <div class="menu-card-plat-price">
+                            <p class="menu-card-plat-price_money">23€</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-menu">
+                    <input type="submit" value="Commander">
+                </div>
 
             </div>
         </section>
@@ -138,10 +202,6 @@
                                                
                 </div>
             </div>
-
-
         </footer>
-
-
     </main>
 </body>
