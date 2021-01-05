@@ -264,26 +264,50 @@ p.title_text {
 }
 
 .btn-heart {
-  position: relative;
-  left: -100vw;
+  width: 20%;
+  margin-right: -25%;
+  margin-top: 10%;
 }
 
-[for="btn-heart"] {
-  color: white;
-  cursor: pointer;
-  font-size: 2em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-right: -40px;
-  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-  -webkit-transition: color 0.9s ease-in-out, text-shadow 0.6s ease-in-out;
-  transition: color 0.9s ease-in-out, text-shadow 0.6s ease-in-out;
+.fa-heart {
+  font-size: 25px;
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
-label:hover {
-  color: #FF79DA;
+.fa-heart:hover {
   text-shadow: none;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation-name: heart-zoom;
+          animation-name: heart-zoom;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+}
+
+@-webkit-keyframes heart-zoom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes heart-zoom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 footer {
@@ -343,21 +367,8 @@ footer {
 }
 
 .btn-heart-card {
-  position: relative;
-  left: -100vw;
-}
-
-[for="btn-heart-card"] {
-  color: white;
-  cursor: pointer;
-  font-size: 2em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-right: -10px;
-  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-  -webkit-transition: color 0.9s ease-in-out, text-shadow 0.6s ease-in-out;
-  transition: color 0.9s ease-in-out, text-shadow 0.6s ease-in-out;
+  margin-right: 5%;
+  margin-top: 7%;
 }
 
 .menu {
@@ -460,6 +471,7 @@ footer {
 }
 
 /*
+
 .menu-card-plat {
      
     border-right: 0 solid #00ff99;
