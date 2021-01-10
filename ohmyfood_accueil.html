@@ -27,8 +27,18 @@
 <!-- RS A FAIRE -->       
     </head>
 
-<body>
+<body>     
+
     <main>
+
+        <!-- Loading Spinner -->
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">
+                chargement ...
+            </div>
+            
+        </div>
 
         <!-- Header -->
         <header>
@@ -42,21 +52,20 @@
                 <div class="search-filter">
                     <input type="text" id="town" placeholder="Paris, Belleville" class="search_filter">
                 </div>
-                </div>
             </div>
         </header>
 
         <!-- Accroche and button -->
-        <section class="btn-accueil">
+        <div class="btn-accueil">
             <p class="title_text">Réservez le menu qui vous convient</p>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <div class="btn-accueil-explore">
                 <input type="submit" value="Explorer nos restaurants">
             </div>
-        </section>
+        </div>
 
         <!-- manual -->
-        <section class="manual">
+        <div class="manual">
 
             <p class="title_text">Fonctionnement</p>
 
@@ -101,11 +110,11 @@
                     </div> 
                 </div>              
             </div>
-        </section>
+        </div>
 
 
         <!-- Restau -->
-        <section class="restau">    
+        <div class="restau">    
             
                 <p class="title_text">                  
                     Restaurants
@@ -155,11 +164,12 @@
                     
                     
                 <div class="restau-card">
-                    <a>
+                    <a href="alafrancaise.html">
                         <div class="restau-card-img">                    
                             <img src="images/restaurants/alafr.jpg" class="restau-card_img" alt="À la française">
-                            <div id="restau-card-nonew" class="restau-card-new">Nouveau</div>                                    
+                            <div class="restau-card-nonew">Nouveau</div>                                    
                         </div>
+                        
     
                         <div class="restau-card-name">
                             <div class="restau-card-name-title">
@@ -179,7 +189,7 @@
                     <a>
                         <div class="restau-card-img">                    
                             <img src="images/restaurants/ledelice.jpg" class="restau-card_img" alt="Le délice des sens">
-                            <div id="restau-card-nonew" class="restau-card-new">Nouveau</div>                                    
+                            <div class="restau-card-nonew">Nouveau</div>                                    
                         </div>
     
                         <div class="restau-card-name">
@@ -194,7 +204,7 @@
                         </div>
                     </a>
                     </div>
-        </section>
+                </div>
 
         <footer>
             <div class="about">
