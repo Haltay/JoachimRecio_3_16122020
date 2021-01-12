@@ -6,11 +6,6 @@
     font-family: 'Shrikhand', cursive, sans-serif;
 }
 
-a
-{    
-    text-decoration: none;    
-}
-
 body
 {
     font-family: 'Roboto', sans-serif;
@@ -27,10 +22,11 @@ body
 .loader
 {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: $color-background-grey;
-    position: absolute;
-    z-index: 9999;
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;    
 }
 
 .loader-spinner {
@@ -40,7 +36,7 @@ body
     border-bottom: 16px solid $color-secondary;
     width: 100px;
     height: 100px;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear;
     @include center-object;
     margin-top: 45%;
   }
@@ -58,7 +54,7 @@ body
 
 
 .loader {
-    animation: finish 2s forwards ease-in;    
+    animation: finish 2s forwards ease-in; 
 }
 
 @keyframes finish {
@@ -70,7 +66,6 @@ body
     90%  {opacity: 0.4;}
     100% {opacity: 0;}
 }
-
 
 
 // header
@@ -161,7 +156,11 @@ img
           font-size: 1em;
           border: none;
           @include box-shadow;
-        }
+        }          
+}
+
+.btn-accueil-explore input:hover {
+    @include btn-hover;
 }
 
 // Manual
@@ -218,9 +217,18 @@ p.title_text
     }
 
     .manual-card-ft_text {
-        font-size: 1.2em;
+        font-size: 1.1em;
         padding-left: 20px;
+        font-weight: bold;
     }
+}
+
+.manual-card-ft:hover {
+    background-color: $color-background-btn-hover;
+    
+        .manual-card-ft_font{
+            color: $color-primary;
+        }
 }
 
 // Restaurants
@@ -230,6 +238,12 @@ p.title_text
     background-color: $color-background-grey ;
     padding-top: 10%;
     padding-bottom: 12%;
+
+        a{    
+            text-decoration: none;
+            color: black;
+        }
+    
 }
 
 .restau-card
@@ -336,7 +350,7 @@ footer
 {
     background-color: $color-background-footer;
     color: white;
-    height: 240px;
+    height: 210px;
     width: 100%;
 }
 
@@ -366,6 +380,11 @@ footer
         padding-bottom: 3%;
         margin-left: -3%;
         color: #f2f2f2;
+        
+            a{
+                text-decoration: none;
+                color: #f2f2f2;            
+            }
     }
 }
 
@@ -423,7 +442,7 @@ footer
 
     .menu-card_title{
         width: 13%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-bottom: 5%;
         padding-bottom: 1%;
         border-bottom: solid $color-tertiary 2px;
@@ -432,24 +451,41 @@ footer
 
     .menu-card-plat{
         @include menu-card-plat;
-        @include box-shadow;       
+        @include box-shadow;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;    
+        
+            .menu-card-plat-name{
+                width: 260px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;  
+            }
 
             .menu-card-plat-name_name{
                 margin-bottom: 0;
-                @include title-in-card;              
+                @include title-in-card; 
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;             
             }
 
             .menu-card-plat-name_description{
                 font-size: 0.9em;
                 margin-top: 0;            
-                padding-top: 3%; 
+                padding-top: 3%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         
-            .menu-card-plat-price{          
-                
+            .menu-card-plat-price{    
+                width: 50px;
+                text-align: center;         
             
                 .menu-card-plat-price_money{
-                    float: right;
                     font-weight: bold;
                 }
             }
@@ -457,40 +493,33 @@ footer
 }
 
 
-/* pour eviter débordement de div du texte
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-*/
-
     // Box coulissante
 
 .menu-card-plat-checked
-{
-    border: red 1px solid;
+{   
     width: 0;
-    height: 100%;    
-    text-align: center;    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
     border-radius: 0 20px 20px 0;
     background-color: $color-tertiary;
-    transition: width 1s;
+    transition: width 0.6s;  
         
         .fa-check-circle {
-            display: none;
-            margin-top: 35%;         
-            color: white;                                
+            display: none;     
+            color: white;        
         }       
 }
 
 .menu-card-plat:hover .menu-card-plat-checked{
-    width: 60px;        
+    width: 70px;        
 } 
 
 .menu-card-plat:hover .fa-check-circle{
-    display: block;
-    margin-top: 35%;         
+    display: block;        
     color: white;
-    animation: rotation 0.8s linear ;
+    animation: rotation 0.5s linear ;
 }
 
 @keyframes rotation {
@@ -502,26 +531,34 @@ footer
     }
 }
 
+
     // apparition progressive elements
 
 .menu-card-plat-1 {
-    animation: fadein 1.5s;
+    animation: fadein 0.8s;
                
 }
 .menu-card-plat-2 {
-    animation: fadein 2.5s;
-               
+    animation: fadein 1.6s;               
 }
 
 .menu-card-plat-3 {
-    animation: fadein 3.0s;               
+    animation: fadein 2.0s;  
+}
+
+.menu-card-plat-4 {
+    animation: fadein 2.2s;  
 }
 
 @keyframes fadein {
     from {
-        opacity:0; }
+        opacity:0; 
+        transform: translate3d(0, 25%, 0);    
+    }
     to {
-        opacity:1; }
+        opacity:1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 
@@ -545,4 +582,8 @@ footer
           border: none;
           @include box-shadow;
         }
+}
+
+.btn-menu input:hover {
+    @include btn-hover;
 }

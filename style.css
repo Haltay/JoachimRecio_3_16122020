@@ -1,10 +1,5 @@
-@charset "UTF-8";
 .logo, h1, h2, h3 {
   font-family: 'Shrikhand', cursive, sans-serif;
-}
-
-a {
-  text-decoration: none;
 }
 
 body {
@@ -15,10 +10,11 @@ body {
 
 .loader {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: #f6f6f6;
-  position: absolute;
-  z-index: 9999;
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .loader-spinner {
@@ -28,8 +24,8 @@ body {
   border-bottom: 16px solid #FF79DA;
   width: 100px;
   height: 100px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear;
+          animation: spin 2s linear;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -218,6 +214,13 @@ img {
           box-shadow: 5px 15px 21px -13px #000000;
 }
 
+.btn-accueil-explore input:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 5px 15px 11px -10px #000000;
+          box-shadow: 5px 15px 11px -10px #000000;
+}
+
 p.title_text {
   font-size: 1.5em;
   font-weight: bolder;
@@ -287,14 +290,28 @@ p.title_text {
 }
 
 .manual-card-ft .manual-card-ft_text {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-left: 20px;
+  font-weight: bold;
+}
+
+.manual-card-ft:hover {
+  background-color: #f5edff;
+}
+
+.manual-card-ft:hover .manual-card-ft_font {
+  color: #9356DC;
 }
 
 .restau {
   background-color: #f6f6f6;
   padding-top: 10%;
   padding-bottom: 12%;
+}
+
+.restau a {
+  text-decoration: none;
+  color: black;
 }
 
 .restau-card {
@@ -362,7 +379,7 @@ p.title_text {
 }
 
 .restau-card .restau-card-name_title {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bolder;
   margin-bottom: -5px;
 }
@@ -417,7 +434,7 @@ p.title_text {
 footer {
   background-color: #353535;
   color: white;
-  height: 240px;
+  height: 210px;
   width: 100%;
 }
 
@@ -449,6 +466,11 @@ footer {
 .about .about-list-nofont {
   padding-bottom: 3%;
   margin-left: -3%;
+  color: #f2f2f2;
+}
+
+.about .about-list-nofont a {
+  text-decoration: none;
   color: #f2f2f2;
 }
 
@@ -516,7 +538,7 @@ footer {
 
 .menu-card .menu-card_title {
   width: 13%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 5%;
   padding-bottom: 1%;
   border-bottom: solid #99E2D0 2px;
@@ -539,57 +561,77 @@ footer {
   padding: 0 0 0 3%;
   -webkit-box-shadow: 5px 15px 21px -13px #000000;
           box-shadow: 5px 15px 21px -13px #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-card .menu-card-plat .menu-card-plat-name {
+  width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name_name {
   margin-bottom: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bolder;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name_description {
   font-size: 0.9em;
   margin-top: 0;
   padding-top: 3%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-card .menu-card-plat .menu-card-plat-price {
+  width: 50px;
+  text-align: center;
 }
 
 .menu-card .menu-card-plat .menu-card-plat-price .menu-card-plat-price_money {
-  float: right;
   font-weight: bold;
 }
 
-/* pour eviter débordement de div du texte
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-*/
 .menu-card-plat-checked {
-  border: red 1px solid;
   width: 0;
   height: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: width 0.6s;
+  transition: width 0.6s;
 }
 
 .menu-card-plat-checked .fa-check-circle {
   display: none;
-  margin-top: 35%;
   color: white;
 }
 
 .menu-card-plat:hover .menu-card-plat-checked {
-  width: 60px;
+  width: 70px;
 }
 
 .menu-card-plat:hover .fa-check-circle {
   display: block;
-  margin-top: 35%;
   color: white;
-  -webkit-animation: rotation 0.8s linear;
-          animation: rotation 0.8s linear;
+  -webkit-animation: rotation 0.5s linear;
+          animation: rotation 0.5s linear;
 }
 
 @-webkit-keyframes rotation {
@@ -615,35 +657,48 @@ footer {
 }
 
 .menu-card-plat-1 {
-  -webkit-animation: fadein 1.5s;
-          animation: fadein 1.5s;
+  -webkit-animation: fadein 0.8s;
+          animation: fadein 0.8s;
 }
 
 .menu-card-plat-2 {
-  -webkit-animation: fadein 2.5s;
-          animation: fadein 2.5s;
+  -webkit-animation: fadein 1.6s;
+          animation: fadein 1.6s;
 }
 
 .menu-card-plat-3 {
-  -webkit-animation: fadein 3.0s;
-          animation: fadein 3.0s;
+  -webkit-animation: fadein 2.0s;
+          animation: fadein 2.0s;
+}
+
+.menu-card-plat-4 {
+  -webkit-animation: fadein 2.2s;
+          animation: fadein 2.2s;
 }
 
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+            transform: translate3d(0, 25%, 0);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fadein {
   from {
     opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+            transform: translate3d(0, 25%, 0);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
@@ -674,5 +729,12 @@ footer {
   border: none;
   -webkit-box-shadow: 5px 15px 21px -13px #000000;
           box-shadow: 5px 15px 21px -13px #000000;
+}
+
+.btn-menu input:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 5px 15px 11px -10px #000000;
+          box-shadow: 5px 15px 11px -10px #000000;
 }
 /*# sourceMappingURL=style.css.map */

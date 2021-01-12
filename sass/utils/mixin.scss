@@ -21,13 +21,20 @@
 
     // Taille police dans card (titre)
     @mixin title-in-card{
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: bolder;
     }
+
 
 // Box-shadow
 @mixin box-shadow {    
     box-shadow: 5px 15px 21px -13px #000000;
+}
+
+// Bouton hover (background et box-sahdow)
+@mixin btn-hover {    
+    filter: brightness(110%);
+    box-shadow: 5px 15px 11px -10px #000000;
 }
 
 // contenu des cards de menu
