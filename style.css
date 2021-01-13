@@ -115,7 +115,7 @@ body {
 
 header {
   width: 100%;
-  padding-top: 3%;
+  padding-top: 6%;
 }
 
 img {
@@ -126,7 +126,7 @@ img {
 }
 
 .logo {
-  width: 40%;
+  width: 45%;
   margin: auto;
   padding-bottom: 1.5%;
 }
@@ -157,7 +157,7 @@ img {
 }
 
 #town {
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: bolder;
   border: none;
   background-color: #eaeaea;
@@ -171,7 +171,7 @@ img {
 .btn-accueil .title_text {
   margin-top: 0;
   width: 70%;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bolder;
   text-align: center;
   margin-left: auto;
@@ -222,7 +222,7 @@ img {
 }
 
 p.title_text {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bolder;
   padding-left: 5%;
 }
@@ -306,7 +306,7 @@ p.title_text {
 .restau {
   background-color: #f6f6f6;
   padding-top: 10%;
-  padding-bottom: 12%;
+  padding-bottom: 10%;
 }
 
 .restau a {
@@ -338,19 +338,17 @@ p.title_text {
   display: flex;
 }
 
-.restau-card .restau-card_img {
+.restau-card .restau-card-img .restau-card_img {
   width: 100%;
   min-width: 338px;
   height: 100%;
   max-height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
   border-radius: 20px;
-  z-index: 2;
 }
 
-.restau-card .restau-card-new {
+.restau-card .restau-card-img .restau-card-new {
   height: 100%;
   width: auto;
   padding: 4% 6% 4% 6%;
@@ -359,11 +357,10 @@ p.title_text {
   font-weight: bold;
   background-color: #99e2d0;
   color: #008766;
-  z-index: 3;
   border-radius: 5%;
 }
 
-.restau-card .restau-card-nonew {
+.restau-card .restau-card-img .restau-card-nonew {
   display: none;
 }
 
@@ -381,7 +378,7 @@ p.title_text {
 .restau-card .restau-card-name_title {
   font-size: 1.1em;
   font-weight: bolder;
-  margin-bottom: -5px;
+  margin-bottom: -10px;
 }
 
 .btn-heart {
@@ -407,6 +404,7 @@ p.title_text {
           animation-name: heart-zoom;
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
+  cursor: pointer;
 }
 
 @-webkit-keyframes heart-zoom {
@@ -434,7 +432,7 @@ p.title_text {
 footer {
   background-color: #353535;
   color: white;
-  height: 210px;
+  height: 220px;
   width: 100%;
 }
 
@@ -445,7 +443,7 @@ footer {
 
 .about p {
   font-family: 'Shrikhand', cursive, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .about .about-list-font {
@@ -453,6 +451,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 3%;
+  font-weight: 500;
 }
 
 .about .about-list_text {
@@ -488,8 +487,16 @@ footer {
 
 .header-card .arrowback {
   width: auto;
+  margin: -10px 0 0 30px;
+}
+
+.header-card .arrowback a {
+  text-decoration: none;
   color: #353535;
-  margin: -10px -50px 0 30px;
+}
+
+.header-card .logo {
+  margin-left: 16%;
 }
 
 .btn-heart-card {
@@ -507,10 +514,19 @@ footer {
           flex-direction: column;
 }
 
+.menu .restau_img {
+  width: 100%;
+  min-width: 338px;
+  height: 100%;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .menu-restau {
   background-color: #f6f6f6;
   margin-top: -13%;
-  border-radius: 30px 30px 0 0;
+  border-radius: 35px 35px 0 0;
 }
 
 .menu-restau-title {
@@ -521,7 +537,8 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 5% 0 5%;
+  padding: 3% 5% 2% 5%;
+  font-size: 1.1em;
 }
 
 .menu-card {
@@ -533,7 +550,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 5% 0 5%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .menu-card .menu-card_title {
@@ -561,9 +578,6 @@ footer {
   padding: 0 0 0 3%;
   -webkit-box-shadow: 5px 15px 21px -13px #000000;
           box-shadow: 5px 15px 21px -13px #000000;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name {
@@ -709,7 +723,7 @@ footer {
   width: 100%;
   height: 60px;
   margin-top: -3%;
-  padding-bottom: 20%;
+  padding-bottom: 15%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

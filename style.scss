@@ -17,6 +17,8 @@ body
 @import "./sass/utils/variables";
 
 
+// PAGE ACCUEIL
+
 // Loading Spinner
 
 .loader
@@ -73,7 +75,7 @@ body
 header
 {
     width: 100%;
-    padding-top: 3%;
+    padding-top: 6%;
 }
 
 img
@@ -85,7 +87,7 @@ img
 
 .logo
 {   
-    width: 40%;
+    width: 45%;
     margin: auto; 
     padding-bottom: 1.5%;   
 }
@@ -113,7 +115,7 @@ img
 
 #town
 {   
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-weight: bolder;
     border: none;
     background-color: $color-background-search;
@@ -148,13 +150,7 @@ img
     @include center-div;
 
         input{
-          width: 55%;  
-          height: 80%;
-          border-radius: 30px;
-          background-image: linear-gradient(to top, $color-primary, $color-secondary);
-          color: white;
-          font-size: 1em;
-          border: none;
+          @include btn-layout;
           @include box-shadow;
         }          
 }
@@ -237,7 +233,7 @@ p.title_text
 {
     background-color: $color-background-grey ;
     padding-top: 10%;
-    padding-bottom: 12%;
+    padding-bottom: 10%;
 
         a{    
             text-decoration: none;
@@ -262,17 +258,15 @@ p.title_text
 .restau-card{
     .restau-card-img{
         width: 170px;
-        display: flex;
-    }
+        display: flex;        
+    
         .restau-card_img{
             width: 100%;
             min-width: 338px;
             height: 100%;
             max-height: 170px;
-            object-fit: cover;
-            overflow: hidden;
-            border-radius: 20px;
-            z-index: 2;
+            object-fit: cover;            
+            border-radius: 20px;         
         }
 
         .restau-card-new{
@@ -284,15 +278,14 @@ p.title_text
             font-weight: bold;
             background-color: $color-background-new;
             color: $color-background-new_title;
-            z-index: 3;
             border-radius: 5%;
         }
 
         .restau-card-nonew{
             display: none;
         }
+    }
 }
-
 
 .restau-card{
     .restau-card-name{
@@ -303,7 +296,7 @@ p.title_text
     }
         .restau-card-name_title{
             @include title-in-card; 
-            margin-bottom: -5px;                
+            margin-bottom: -10px;              
         }
 }
 
@@ -318,19 +311,11 @@ p.title_text
 }
 
 .fa-heart {
-    font-size: 25px;
-    color: #fff;    
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    
+    @include heart-layout;    
   
         &:hover {
-            text-shadow: none;
-            background: -webkit-linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform: scale(1.1);
-            animation-name: heart-zoom;
-            animation-duration: 1000ms       
+              @include heart-animation;
+              @include cursor-layout; 
         }           
 }
  
@@ -350,7 +335,7 @@ footer
 {
     background-color: $color-background-footer;
     color: white;
-    height: 210px;
+    height: 220px;
     width: 100%;
 }
 
@@ -360,13 +345,14 @@ footer
 
     p{
         font-family: 'Shrikhand', cursive, sans-serif;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     
 
     .about-list-font{
         display: flex;
         padding-bottom: 3%;
+        font-weight: 500;
     }    
         .about-list_text {
             padding-left: 3%;
@@ -374,7 +360,6 @@ footer
             .partner {
                 margin-left: -0.7%;
             }
-
 
     .about-list-nofont{
         padding-bottom: 3%;
@@ -388,57 +373,75 @@ footer
     }
 }
 
-// Page A la Française
+
+// PAGES MENU
 
     //header
 
 .header-card{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-div 
     
     .arrowback{   
-        width: auto;
-        color: $color-arrow-left;
-        margin: -10px -50px 0 30px;            
-    }       
+        width: auto;  
+        margin: -10px 0 0 30px;     
+            
+            a{
+                text-decoration: none;
+                color: $color-arrow-left;
+            }
+        }
+    
+    .logo{
+        margin-left: 16%;
+    }
 }
 
     // btn coeur card
 
 .btn-heart-card 
 {
-  margin-right: 5%;
-  margin-top: 7%;
-}
-  
-.menu
-{
-    display: flex;
-    flex-direction: column;       
+    margin-right: 5%;
+    margin-top: 7%;
 }
 
-    // MENU
+ // Menu
+
+.menu{
+    display: flex;
+    flex-direction: column; 
+    
+    .restau_img{
+        width: 100%;
+        min-width: 338px;
+        height: 100%;
+        max-height: 250px;
+        object-fit: cover;            
+    }
+}
 
 .menu-restau
 {
     background-color: $color-background-grey;
     margin-top: -13%;
-    border-radius: 30px 30px 0 0;
+    border-radius: 35px 35px 0 0;
 }
 
 .menu-restau-title{
     display: flex;
     width: 90%;
     justify-content: space-between;
-    padding: 0 5% 0 5%;
+    padding: 3% 5% 2% 5%;
+    font-size: 1.1em;
 }
+
+// Menu cards
 
 .menu-card{
     display: flex;
     flex-direction: column;
     padding: 0 5% 0 5%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
 
     .menu-card_title{
         width: 13%;
@@ -446,39 +449,28 @@ footer
         margin-bottom: 5%;
         padding-bottom: 1%;
         border-bottom: solid $color-tertiary 2px;
-
     }
 
     .menu-card-plat{
         @include menu-card-plat;
-        @include box-shadow;
-
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;    
+        @include box-shadow;            
         
             .menu-card-plat-name{
                 width: 260px;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;  
+                @include no-flooding;  
             }
 
             .menu-card-plat-name_name{
                 margin-bottom: 0;
                 @include title-in-card; 
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;             
+                @include no-flooding;             
             }
 
             .menu-card-plat-name_description{
                 font-size: 0.9em;
                 margin-top: 0;            
                 padding-top: 3%;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include no-flooding;
             }
         
             .menu-card-plat-price{    
@@ -491,7 +483,6 @@ footer
             }
     }
 }
-
 
     // Box coulissante
 
@@ -531,21 +522,17 @@ footer
     }
 }
 
-
     // apparition progressive elements
 
 .menu-card-plat-1 {
-    animation: fadein 0.8s;
-               
+    animation: fadein 0.8s;               
 }
 .menu-card-plat-2 {
     animation: fadein 1.6s;               
 }
-
 .menu-card-plat-3 {
     animation: fadein 2.0s;  
 }
-
 .menu-card-plat-4 {
     animation: fadein 2.2s;  
 }
@@ -562,24 +549,18 @@ footer
 }
 
 
-    // Button commander
+// Button commander
 
 .btn-menu{
     display: flex;
     width: 100%;
     height: 60px;
     margin-top: -3%;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
     @include center-div;
 
         input{
-          width: 55%;  
-          height: 80%;
-          border-radius: 30px;
-          background-image:linear-gradient(to top, $color-primary, $color-secondary);
-          color: white;
-          font-size: 1em;
-          border: none;
+          @include btn-layout;
           @include box-shadow;
         }
 }
