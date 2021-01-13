@@ -29,7 +29,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 45%;
+  margin-top: 43.8%;
 }
 
 @-webkit-keyframes spin {
@@ -113,11 +113,6 @@ body {
   }
 }
 
-header {
-  width: 100%;
-  padding-top: 6%;
-}
-
 img {
   width: 100%;
   height: 100%;
@@ -125,9 +120,16 @@ img {
      object-fit: cover;
 }
 
+header {
+  width: 100%;
+  padding-top: 6%;
+}
+
 .logo {
   width: 45%;
-  margin: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 1.5%;
 }
 
@@ -305,7 +307,7 @@ p.title_text {
 
 .restau {
   background-color: #f6f6f6;
-  padding-top: 10%;
+  padding-top: 7%;
   padding-bottom: 10%;
 }
 
@@ -332,15 +334,13 @@ p.title_text {
 }
 
 .restau-card .restau-card-img {
-  width: 170px;
+  min-width: 50.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .restau-card .restau-card-img .restau-card_img {
-  width: 100%;
-  min-width: 338px;
   height: 100%;
   max-height: 170px;
   -o-object-fit: cover;
@@ -349,11 +349,11 @@ p.title_text {
 }
 
 .restau-card .restau-card-img .restau-card-new {
+  font-size: 0.9em;
   height: 100%;
-  width: auto;
-  padding: 4% 6% 4% 6%;
-  margin-top: 10%;
-  margin-left: -55%;
+  padding: 1.5% 3% 1.5% 3%;
+  margin-top: 15px;
+  margin-left: -90px;
   font-weight: bold;
   background-color: #99e2d0;
   color: #008766;
@@ -365,7 +365,7 @@ p.title_text {
 }
 
 .restau-card .restau-card-name {
-  width: 250px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,8 +383,7 @@ p.title_text {
 
 .btn-heart {
   width: 20%;
-  margin-right: -25%;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 .fa-heart {
@@ -485,18 +484,26 @@ footer {
           align-items: center;
 }
 
-.header-card .arrowback {
+.arrowback {
   width: auto;
-  margin: -10px 0 0 30px;
+  margin: -10px 0 0 -60px;
 }
 
-.header-card .arrowback a {
+.arrowback a {
   text-decoration: none;
   color: #353535;
 }
 
-.header-card .logo {
+.logo-menu {
+  width: 45%;
+  padding-bottom: 1.5%;
   margin-left: 16%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn-heart-card {
