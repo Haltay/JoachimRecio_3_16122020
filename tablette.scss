@@ -1,0 +1,599 @@
+
+// Police
+
+.logo, h1, h2, h3
+{
+    font-family: 'Shrikhand', cursive, sans-serif;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+@import "./sass/utils/mixin";
+@import "./sass/utils/variables";
+
+
+// PAGE ACCUEIL
+
+// Loading Spinner
+
+.loader
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $color-background-grey;
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;    
+}
+
+.loader-spinner {
+    @include loading-spiner;
+    @include center-object;
+    margin-top: 26%;
+  }
+ 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } 
+
+.loader-text{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.loader {
+    animation: finish 2s forwards ease-in; 
+}
+
+@keyframes finish {
+    0%   {opacity: 1;}
+    20%  {opacity: 1;}
+    40%  {opacity: 0.9;}
+    60%  {opacity: 0.8;}
+    70%  {opacity: 0.8;}
+    90%  {opacity: 0.4;}
+    100% {opacity: 0;}
+}
+
+// image
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// header
+
+header
+{
+    width: 100%;
+    padding-top: 6%;
+}
+
+.logo {   
+    width: 40%;
+    @include center-object;
+    padding-bottom: 1.5%;
+    
+}
+    
+
+
+
+//Search
+.search
+{
+    width: 100%;
+    display: flex;
+    @include center-div;
+    background: $color-background-search;
+    height: 3em;
+    border-top: 2px solid #cfcfcf; 
+}
+
+.search-font{
+    padding-left: 10%;
+    padding-right: 5%;
+        .fas{
+            font-size: 1.2em;
+            color: #353535;
+            }
+}           
+
+#town
+{   
+    font-size: 1em;
+    font-weight: bolder;
+    border: none;
+    background-color: $color-background-search;
+}
+
+
+// Accroche and button
+    // Accroche
+.btn-accueil{
+    background-color: #f6f6f6;
+    padding-top: 6%;
+
+        .title_text{
+            margin-top: 0;           
+            width: 70%;
+            @include title-accueil;
+            @include center-object;        
+            }
+
+        p{
+            font-size: 1.1em;
+            @include center-object;              
+        }
+}
+    // Button
+.btn-accueil-explore{
+    display: flex;
+    font-size: 1.4em;
+    width: 100%;
+    height: 60px;
+    padding-top: 2%;
+    padding-bottom: 8%;
+    @include center-div;
+
+        input{
+          @include btn-layout;
+          @include box-shadow;
+        }          
+}
+
+.btn-accueil-explore input:hover {
+    @include btn-hover;
+}
+
+// Manual
+
+p.title_text
+{
+    @include title-accueil;
+    @include center-object;
+}
+
+.manual
+{
+    margin-bottom: 8%;
+}
+
+.manual-card{
+    display: flex;
+    @include center-div;
+    height: 100px;   
+
+    .manual-card_number{
+        z-index: 3;
+        background-color: $color-primary;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        @include center-object;
+        vertical-align: middle;
+        border-radius: 50%;
+        color: white;
+        font-weight: bolder;
+        margin-right: -7%;
+        margin-left: 0;
+    }
+
+    .manual-card-ft{
+        z-index: 2;
+        display: flex;
+        background-color: $color-background-grey;
+        height: 80px;
+        width: 70%;
+        @include center-div;
+        justify-content: flex-start;
+        border-radius: 20px;
+        @include box-shadow
+    }
+}
+
+.manual-card-ft {
+    .manual-card-ft_font {
+        color: #8d8d8d;
+        font-size: 21px;
+        padding-left: 22%;       
+    }
+
+    .manual-card-ft_text {
+        text-align: left;
+        font-size: 1.1em;
+        margin-left: 12%;
+        font-weight: bold;
+    }
+}
+
+.manual-card-ft:hover {
+    background-color: $color-background-btn-hover;
+    
+        .manual-card-ft_font{
+            color: $color-primary;
+        }
+}
+
+// Restaurants
+
+.restau
+{
+    background-color: $color-background-grey ;
+    padding-top: 3%;
+    padding-bottom: 10%;
+
+        a{    
+            text-decoration: none;
+            color: black;
+        }    
+}
+
+.restau-card
+{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 20px;
+    @include box-shadow;
+}
+
+.restau-card{
+    .restau-card-img{     
+        min-width: 52vh;        
+        display: flex;       
+    
+        .restau-card_img{                    
+            height: 100%;
+            max-height: 190px;
+            object-fit: cover;       
+            border-radius: 20px;         
+        }
+
+        .restau-card-new{
+            font-size: 0.9em;
+            height: 100%;            
+            padding: 1.5% 3% 1.5% 3%;
+            margin-top: 15px;
+            margin-left: -16%;
+            font-weight: bold;
+            background-color: $color-background-new;
+            color: $color-background-new_title;
+            border-radius: 5%;
+        }
+
+        .restau-card-nonew{
+            display: none;
+        }
+    }
+}
+
+.restau-card{
+    .restau-card-name{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 13px;        
+    }
+
+        .restau-card-name-title{
+            margin-left: 5%;
+            margin-top: -1%;
+        }
+
+        .restau-card-name_title{
+            font-size: 1.3em;
+            font-weight: bolder; 
+            margin-bottom: -10px;            
+        }
+}
+
+
+// btn coeur
+
+.btn-heart 
+{
+    width: 20%;
+    margin-top: 4%;
+}
+
+.fa-heart {
+    @include heart-layout;    
+  
+        &:hover {
+              @include heart-animation;
+              @include cursor-layout; 
+        }           
+}
+ 
+@keyframes heart-zoom{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+
+// Footer
+
+footer 
+{
+    background-color: $color-background-footer;
+    color: white;
+    height: 350px;
+    width: 100%;
+}
+
+.about{    
+    padding-top: 2%;
+    
+    p{
+        font-family: 'Shrikhand', cursive, sans-serif;
+        font-size: 1.3em;
+        @include center-object;
+        margin-bottom: 5%;
+    }
+   
+    .about-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include center-div;
+        font-size: 1em;
+        margin-left: 12%;
+    }
+
+    .about-list-font{
+        display: flex;
+        width: 40%;       
+        margin-bottom: 3%;
+        font-weight: 500;
+        margin-left: 5%;
+        margin-right: 5%;
+       
+        .about-list_text {
+            padding-left: 3%;
+        
+            .partner {
+                margin-left: -0.7%;
+            }
+        }
+    }
+
+    .about-list-nofont{
+        width: 40%;   
+        margin-left: 5%;
+        margin-right: 5%;
+        
+        color: #f2f2f2;
+        
+            a{
+                text-decoration: none;
+                color: #f2f2f2;            
+            }
+    }
+}
+
+
+// PAGES MENU
+
+    //header
+
+.header-card{
+    display: flex;
+    @include center-div 
+}
+    
+.arrowback{   
+    width: auto;  
+    margin: -10px 0 0 -60px;     
+        
+        a{
+            font-size: 1.7em;
+            text-decoration: none;
+            color: $color-arrow-left;
+        }
+}
+
+.logo-menu{
+    width: 38%;    
+    padding-bottom: 1.5%;
+    margin-left: 14%;
+    @include center-div;
+}
+
+    // btn coeur card
+
+.btn-heart-card{
+    margin-right: 5%;
+    margin-top: 6%;
+}
+
+ // Menu
+
+.menu{
+    display: flex;
+    flex-direction: column; 
+    
+    .restau_img{
+        @include center-object;
+        width: 90%;
+        min-width: 338px;
+        height: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 50%;           
+    }
+}
+
+.menu-restau
+{
+    background-color: $color-background-grey;
+    margin-top: -2%;
+    border-radius: 35px 35px 0 0;
+}
+
+.menu-restau-title{
+    display: flex;
+    width: 70%;
+    margin-left: 9%;
+    justify-content: space-between;
+    padding: 3% 5% 2% 5%;
+    font-size: 1.3em;
+}
+
+// Menu cards
+
+.menu-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+    width: 75%;
+    margin-bottom: 7%;
+
+    .menu-card_title{
+        width: 120%;
+        font-size: 1.3em;
+        margin-bottom: 5%;
+        padding-bottom: 1%;
+        
+        border-bottom: solid $color-tertiary 2px;
+    }
+
+    .menu-card-plat{
+        width: 75%;
+        margin-left: 20%;
+        @include menu-card-plat;
+        @include box-shadow;            
+        
+            .menu-card-plat-name{
+                width: 300px;
+                margin-left: 3%;
+                @include no-flooding;  
+            }
+
+            .menu-card-plat-name_name{
+                margin-bottom: 0;
+                @include title-in-card; 
+                @include no-flooding;             
+            }
+
+            .menu-card-plat-name_description{
+                font-size: 1em;
+                margin-top: 0;            
+                padding-top: 3%;
+                @include no-flooding;
+            }
+        
+            .menu-card-plat-price{    
+                width: 50px;
+                text-align: center;         
+            
+                .menu-card-plat-price_money{
+                    font-weight: bold;
+                }
+            }
+    }
+}
+
+    // Box coulissante
+
+.menu-card-plat-checked
+{   
+    width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 0 20px 20px 0;
+    background-color: $color-tertiary;
+    transition: width 0.6s;  
+        
+        .fa-check-circle {
+            display: none;     
+            color: white;        
+        }       
+}
+
+.menu-card-plat:hover .menu-card-plat-checked{
+    width: 70px;        
+} 
+
+.menu-card-plat:hover .fa-check-circle{
+    display: block;        
+    color: white;
+    animation: rotation 0.5s linear ;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+    // apparition progressive elements
+
+.menu-card-plat-1 {
+    animation: fadein 0.8s;               
+}
+.menu-card-plat-2 {
+    animation: fadein 1.6s;               
+}
+.menu-card-plat-3 {
+    animation: fadein 2.0s;  
+}
+.menu-card-plat-4 {
+    animation: fadein 2.2s;  
+}
+
+@keyframes fadein {
+    from {
+        opacity:0; 
+        transform: translate3d(0, 25%, 0);    
+    }
+    to {
+        opacity:1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+// Button commander
+
+.btn-menu{
+    display: flex;
+    font-size: 1.4em;
+    width: 100%;
+    height: 60px;
+    margin-top: -3%;
+    padding-bottom: 7%;
+    @include center-div;
+
+        input{
+          @include btn-layout;
+          @include box-shadow;
+        }
+}
+
+.btn-menu input:hover {
+    @include btn-hover;
+}

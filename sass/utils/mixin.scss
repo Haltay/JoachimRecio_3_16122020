@@ -59,7 +59,8 @@
 
 // btn coeur
     // coeur layout
-    @mixin heart-layout {font-size: 25px;
+    @mixin heart-layout {
+        font-size: 25px;
         color: #fff;    
         text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;            
     }
@@ -92,3 +93,14 @@
         filter: brightness(110%);
         box-shadow: 5px 15px 11px -10px #000000;
     }
+
+// loading-spinner
+    @mixin loading-spiner {
+        border: 16px solid $color-tertiary;
+        border-radius: 50%;
+        border-top: 16px solid $color-primary;
+        border-bottom: 16px solid $color-secondary;
+        width: 100px;
+        height: 100px;
+        animation: spin 2s linear;
+}

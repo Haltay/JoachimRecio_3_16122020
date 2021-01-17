@@ -32,13 +32,7 @@ body
 }
 
 .loader-spinner {
-    border: 16px solid $color-tertiary;
-    border-radius: 50%;
-    border-top: 16px solid $color-primary;
-    border-bottom: 16px solid $color-secondary;
-    width: 100px;
-    height: 100px;
-    animation: spin 2s linear;
+    @include loading-spiner;
     @include center-object;
     margin-top: 43.8%;
   }
@@ -148,6 +142,7 @@ header
     height: 60px;
     padding-top: 2%;
     padding-bottom: 10%;
+    font-size: 1em;
     @include center-div;
 
         input{
@@ -239,8 +234,7 @@ p.title_text
         a{    
             text-decoration: none;
             color: black;
-        }
-    
+        }    
 }
 
 .restau-card
