@@ -20,10 +20,18 @@
     }
 
     // Taille police dans card (titre)
-    @mixin title-in-card{
-        font-size: 1.1em;
-        font-weight: bolder;
+    @mixin title-in-card {
+         @media (min-width: 1389px) { 
+             font-size: 1.4em;
+            font-weight: bolder;
+        } 
+
+        @media (max-width: 767px) { 
+            font-size: 1.1em;
+           font-weight: bolder;
+       } 
     }
+        
 
 
 // Cursor
@@ -39,14 +47,28 @@
 
 // contenu des cards de menu
 @mixin menu-card-plat {
-    height: 75px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    background: white;
-    border-radius: 20px;
-    margin-bottom: 6%;
-    padding: 0 0 0 3%;    
+    @media (min-width: 1389px) { 
+        height: 110px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: white;
+        border-radius: 20px;
+        margin-bottom: 6%;
+        padding: 0 0 0 3%;
+    } 
+
+    @media (max-width: 767px) { 
+        height: 75px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: white;
+        border-radius: 20px;
+        margin-bottom: 6%;
+        padding: 0 0 0 3%;
+    } 
+
 }
 
 // Débordement div
@@ -61,7 +83,6 @@
     // coeur layout
     @mixin heart-layout {
         font-size: 25px;
-        color: #fff;    
         text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;            
     }
 

@@ -151,7 +151,7 @@ header {
 
 .search-font {
   padding-left: 9%;
-  padding-right: 9%;
+  padding-right: 10%;
 }
 
 .search-font .fas {
@@ -342,10 +342,16 @@ p.title_text {
 
 .manual-card-ft:hover {
   background-color: #f5edff;
+  -webkit-box-shadow: 5px 15px 11px -10px #000000;
+          box-shadow: 5px 15px 11px -10px #000000;
 }
 
 .manual-card-ft:hover .manual-card-ft_font {
   color: #9356DC;
+}
+
+.manual-card:hover .manual-card_number {
+  background-color: #a16be0;
 }
 
 .restau {
@@ -414,15 +420,15 @@ p.title_text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40%;
+  width: 50%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .restau-card .restau-card-name-title {
-  margin-left: 8%;
-  margin-top: 10%;
+  margin-left: 12%;
+  margin-top: 6%;
 }
 
 .restau-card .restau-card-name_title {
@@ -432,7 +438,7 @@ p.title_text {
 
 .btn-heart {
   width: 30%;
-  margin-top: 17%;
+  margin-top: 12%;
   margin-right: -25%;
 }
 
@@ -559,23 +565,25 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: -30%;
 }
 
 .arrowback {
   width: auto;
-  margin: -10px 0 0 -60px;
+  margin-left: -60px;
+  padding-bottom: 20px;
 }
 
 .arrowback a {
-  font-size: 1.7em;
+  font-size: 1.8em;
   text-decoration: none;
   color: #353535;
 }
 
 .logo-menu {
-  width: 38%;
+  width: 30%;
   padding-bottom: 1.5%;
-  margin-left: 14%;
+  margin-left: 8%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -585,8 +593,12 @@ footer {
 }
 
 .btn-heart-card {
-  margin-right: 5%;
-  margin-top: 6%;
+  margin-right: 0%;
+  margin-top: 4%;
+}
+
+.btn-heart-card i {
+  color: #f6f6f6;
 }
 
 .menu {
@@ -623,12 +635,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 70%;
-  margin-left: 9%;
+  margin-left: 4%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 3% 5% 2% 5%;
-  font-size: 1.3em;
+  font-size: 1.6em;
 }
 
 .menu-card {
@@ -641,41 +653,67 @@ footer {
           flex-direction: column;
   padding: 0 5% 0 5%;
   width: 75%;
-  margin-bottom: 7%;
+  margin-bottom: 2%;
 }
 
 .menu-card .menu-card_title {
-  width: 120%;
-  font-size: 1.3em;
+  width: 100%;
+  font-size: 1.5em;
+  margin-left: 11%;
   margin-bottom: 5%;
   padding-bottom: 1%;
   border-bottom: solid #99E2D0 2px;
 }
 
 .menu-card .menu-card-plat {
-  width: 75%;
-  margin-left: 20%;
-  height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: white;
-  border-radius: 20px;
-  margin-bottom: 6%;
-  padding: 0 0 0 3%;
+  width: 55%;
+  margin-left: 30%;
   -webkit-box-shadow: 5px 15px 21px -13px #000000;
           box-shadow: 5px 15px 21px -13px #000000;
+}
+
+@media (min-width: 1389px) {
+  .menu-card .menu-card-plat {
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-card .menu-card-plat {
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name {
   width: 300px;
   margin-left: 3%;
+  margin-bottom: 1%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -683,15 +721,27 @@ footer {
 
 .menu-card .menu-card-plat .menu-card-plat-name_name {
   margin-bottom: 0;
-  font-size: 1.1em;
-  font-weight: bolder;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
+@media (min-width: 1389px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.4em;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
+}
+
 .menu-card .menu-card-plat .menu-card-plat-name_description {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 0;
   padding-top: 3%;
   overflow: hidden;
@@ -700,8 +750,11 @@ footer {
 }
 
 .menu-card .menu-card-plat .menu-card-plat-price {
+  font-size: 1.2em;
   width: 50px;
   text-align: center;
+  margin-bottom: 3%;
+  margin-left: 25%;
 }
 
 .menu-card .menu-card-plat .menu-card-plat-price .menu-card-plat-price_money {
@@ -814,11 +867,10 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.4em;
+  font-size: 1.6em;
   width: 100%;
   height: 60px;
-  margin-top: -3%;
-  padding-bottom: 7%;
+  padding-bottom: 5%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

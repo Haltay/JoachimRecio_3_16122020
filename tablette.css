@@ -398,8 +398,8 @@ p.title_text {
 
 .fa-heart {
   font-size: 25px;
-  color: #fff;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: #fff;
 }
 
 .fa-heart:hover {
@@ -547,6 +547,7 @@ footer {
 .btn-heart-card {
   margin-right: 5%;
   margin-top: 6%;
+  background-color: #f6f6f6;
 }
 
 .menu {

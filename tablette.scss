@@ -312,7 +312,8 @@ p.title_text
 }
 
 .fa-heart {
-    @include heart-layout;    
+    @include heart-layout;
+    color: #fff;  
   
         &:hover {
               @include heart-animation;
@@ -423,6 +424,7 @@ footer
 .btn-heart-card{
     margin-right: 5%;
     margin-top: 6%;
+    background-color: $color-background-grey;
 }
 
  // Menu

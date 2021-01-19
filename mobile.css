@@ -389,8 +389,8 @@ p.title_text {
 
 .fa-heart {
   font-size: 25px;
-  color: #fff;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: #fff;
 }
 
 .fa-heart:hover {
@@ -405,6 +405,8 @@ p.title_text {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 @-webkit-keyframes heart-zoom {
@@ -510,6 +512,10 @@ footer {
 .btn-heart-card {
   margin-right: 5%;
   margin-top: 7%;
+}
+
+.btn-heart-card i {
+  color: #f6f6f6;
 }
 
 .menu {
@@ -652,8 +658,8 @@ footer {
 .menu-card-plat:hover .fa-check-circle {
   display: block;
   color: white;
-  -webkit-animation: rotation 0.5s linear;
-          animation: rotation 0.5s linear;
+  -webkit-animation: rotation 0.5s ease-out;
+          animation: rotation 0.5s ease-out;
 }
 
 @-webkit-keyframes rotation {
