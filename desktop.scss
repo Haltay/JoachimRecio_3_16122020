@@ -335,21 +335,21 @@ p.title_text{
 // btn coeur
 
 .btn-heart{
-    width: 30%;
-    margin-top: 12%;
-    margin-right: -25%;      
+    width: 30px;
+    height: 30px;
+    margin-top: 12%;         
 }
 
-.fa-heart{
-    
-    font-size: 40px;
-    color: #fff;    
+.fa-heart{    
+    font-size: 30px;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;  
+    color: #fff;                     
+}
 
-        &:hover {
-              @include heart-animation;
-              @include cursor-layout; 
-        }           
+.btn-heart:hover .fa-heart{
+    @include heart-animation;
+    @include cursor-layout;
+    transition-delay:0.1s;
 }
  
 @keyframes heart-zoom{
@@ -460,6 +460,12 @@ footer
         i{
             color: $color-background-grey;
         }
+}
+
+.btn-heart-card:hover .fa-heart{
+    @include heart-animation;
+    @include cursor-layout;
+    transition-delay:0.1s;
 }
 
  // Menu

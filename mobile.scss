@@ -305,13 +305,13 @@ p.title_text
 
 .fa-heart {
     @include heart-layout;
-    color: #fff;     
-  
-        &:hover {
-              @include heart-animation;
-              @include cursor-layout;
-              transition-delay:0.1s;
-        }           
+    color: #fff;                
+}
+
+.btn-heart:hover .fa-heart{
+    @include heart-animation;
+    @include cursor-layout;
+    transition-delay:0.1s;
 }
  
 @keyframes heart-zoom{
@@ -397,12 +397,6 @@ footer
 
     // btn coeur card
 
-.fa-heart:hover {
-    @include heart-animation;
-    @include cursor-layout;
-    transition-delay:0.1s;
-}
-
 .btn-heart-card{
     margin-right: 5%;
     margin-top: 7%;
@@ -410,6 +404,12 @@ footer
         i{
             color: $color-background-grey;
         }
+}
+
+.btn-heart-card:hover .fa-heart{
+    @include heart-animation;
+    @include cursor-layout;
+    transition-delay:0.1s;
 }
 
 

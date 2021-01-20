@@ -403,7 +403,7 @@ p.title_text {
   color: #fff;
 }
 
-.fa-heart:hover {
+.btn-heart:hover .fa-heart {
   text-shadow: none;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -415,6 +415,8 @@ p.title_text {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 @-webkit-keyframes heart-zoom {
@@ -545,7 +547,13 @@ footer {
           align-items: center;
 }
 
-.fa-heart:hover {
+.btn-heart-card {
+  margin-right: 5%;
+  margin-top: 6%;
+  background-color: #f6f6f6;
+}
+
+.btn-heart-card:hover .fa-heart {
   text-shadow: none;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -559,12 +567,6 @@ footer {
   cursor: pointer;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
-}
-
-.btn-heart-card {
-  margin-right: 5%;
-  margin-top: 6%;
-  background-color: #f6f6f6;
 }
 
 .menu {

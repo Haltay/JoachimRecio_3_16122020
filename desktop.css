@@ -438,18 +438,18 @@ p.title_text {
 }
 
 .btn-heart {
-  width: 30%;
+  width: 30px;
+  height: 30px;
   margin-top: 12%;
-  margin-right: -25%;
 }
 
 .fa-heart {
-  font-size: 40px;
-  color: #fff;
+  font-size: 30px;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: #fff;
 }
 
-.fa-heart:hover {
+.btn-heart:hover .fa-heart {
   text-shadow: none;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -461,6 +461,8 @@ p.title_text {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 @-webkit-keyframes heart-zoom {
@@ -600,6 +602,22 @@ footer {
 
 .btn-heart-card i {
   color: #f6f6f6;
+}
+
+.btn-heart-card:hover .fa-heart {
+  text-shadow: none;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation-name: heart-zoom;
+          animation-name: heart-zoom;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .menu {
