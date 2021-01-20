@@ -26,6 +26,11 @@
             font-weight: bolder;
         } 
 
+        @media (min-width: 768px) and (max-width: 1388px) { 
+            font-size: 1.2em;
+           font-weight: bolder;
+       } 
+
         @media (max-width: 767px) { 
             font-size: 1.1em;
            font-weight: bolder;
@@ -49,6 +54,17 @@
 @mixin menu-card-plat {
     @media (min-width: 1389px) { 
         height: 110px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background: white;
+        border-radius: 20px;
+        margin-bottom: 6%;
+        padding: 0 0 0 3%;
+    } 
+
+    @media (min-width: 768px) and (max-width: 1388px) { 
+        height: 75px;
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -124,4 +140,16 @@
         width: 100px;
         height: 100px;
         animation: spin 2s linear;
+}
+
+
+// taille images restau-card
+    //mobile
+@mixin size-img-card {
+
+
+    @media (max-width: 369px) { 
+        min-width: 43.8vh;
+    } 
+
 }

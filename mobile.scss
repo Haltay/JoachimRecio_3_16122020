@@ -234,6 +234,7 @@ p.title_text
         a{    
             text-decoration: none;
             color: black;
+            width: 100%;
         }    
 }
 
@@ -252,14 +253,14 @@ p.title_text
 
 .restau-card{
     .restau-card-img{     
-        min-width: 50.5vh;        
+        @include  size-img-card;
         display: flex;       
     
-        .restau-card_img{                      
-            height: 100%;
+        .restau-card_img{
+            max-width: 373px;               
             max-height: 170px;
             object-fit: cover;       
-            border-radius: 20px;         
+            border-radius: 20px;       
         }
 
         .restau-card-new{
@@ -283,6 +284,7 @@ p.title_text
 .restau-card{
     .restau-card-name{
         width: 100%;
+        max-width: 373px; 
         display: flex;
         justify-content: space-between;
         padding-left: 13px;        
@@ -296,8 +298,7 @@ p.title_text
 
 // btn coeur
 
-.btn-heart 
-{
+.btn-heart{
     width: 20%;
     margin-top: 8%;
 }
@@ -394,8 +395,13 @@ footer
     @include center-div;
 }
 
-
     // btn coeur card
+
+.fa-heart:hover {
+    @include heart-animation;
+    @include cursor-layout;
+    transition-delay:0.1s;
+}
 
 .btn-heart-card{
     margin-right: 5%;
@@ -405,6 +411,7 @@ footer
             color: $color-background-grey;
         }
 }
+
 
  // Menu
 

@@ -389,6 +389,7 @@ p.title_text {
   display: -ms-flexbox;
   display: flex;
   width: 55vh;
+  max-width: 65%;
   height: 230px;
   float: left;
 }
@@ -426,12 +427,12 @@ p.title_text {
           justify-content: space-between;
 }
 
-.restau-card .restau-card-name-title {
+.restau-card .restau-card-name .restau-card-name-title {
   margin-left: 12%;
   margin-top: 6%;
 }
 
-.restau-card .restau-card-name_title {
+.restau-card .restau-card-name .restau-card-name_title {
   font-size: 1.6em;
   font-weight: bolder;
 }
@@ -691,6 +692,25 @@ footer {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1388px) {
+  .menu-card .menu-card-plat {
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
+}
+
 @media (max-width: 767px) {
   .menu-card .menu-card-plat {
     height: 75px;
@@ -729,6 +749,13 @@ footer {
 @media (min-width: 1389px) {
   .menu-card .menu-card-plat .menu-card-plat-name_name {
     font-size: 1.4em;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1388px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.2em;
     font-weight: bolder;
   }
 }

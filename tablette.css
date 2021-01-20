@@ -328,7 +328,7 @@ p.title_text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 75%;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
@@ -339,7 +339,7 @@ p.title_text {
 }
 
 .restau-card .restau-card-img {
-  min-width: 52vh;
+  min-width: 56.35vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,6 +348,7 @@ p.title_text {
 .restau-card .restau-card-img .restau-card_img {
   height: 100%;
   max-height: 190px;
+  max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
@@ -370,7 +371,7 @@ p.title_text {
 }
 
 .restau-card .restau-card-name {
-  width: 100%;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,6 +545,22 @@ footer {
           align-items: center;
 }
 
+.fa-heart:hover {
+  text-shadow: none;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation-name: heart-zoom;
+          animation-name: heart-zoom;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
 .btn-heart-card {
   margin-right: 5%;
   margin-top: 6%;
@@ -606,32 +623,79 @@ footer {
 }
 
 .menu-card .menu-card_title {
-  width: 120%;
+  width: 90%;
   font-size: 1.3em;
+  margin-left: 11.5%;
   margin-bottom: 5%;
   padding-bottom: 1%;
   border-bottom: solid #99E2D0 2px;
 }
 
 .menu-card .menu-card-plat {
-  width: 75%;
-  margin-left: 20%;
-  height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: white;
-  border-radius: 20px;
-  margin-bottom: 6%;
-  padding: 0 0 0 3%;
+  width: 75%;
+  margin-left: 20%;
   -webkit-box-shadow: 5px 15px 21px -13px #000000;
           box-shadow: 5px 15px 21px -13px #000000;
+}
+
+@media (min-width: 1389px) {
+  .menu-card .menu-card-plat {
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1388px) {
+  .menu-card .menu-card-plat {
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-card .menu-card-plat {
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 6%;
+    padding: 0 0 0 3%;
+  }
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name {
@@ -644,11 +708,30 @@ footer {
 
 .menu-card .menu-card-plat .menu-card-plat-name_name {
   margin-bottom: 0;
-  font-size: 1.1em;
-  font-weight: bolder;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media (min-width: 1389px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.4em;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1388px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.2em;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-card .menu-card-plat .menu-card-plat-name_name {
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
 }
 
 .menu-card .menu-card-plat .menu-card-plat-name_description {

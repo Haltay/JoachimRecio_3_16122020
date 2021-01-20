@@ -283,7 +283,8 @@ p.title_text{
 .restau-card{
     .restau-card-img{  
         display: flex;       
-        width: 55vh; 
+        width: 55vh;
+        max-width: 65%;
         height: 230px;
         float:left;              
         
@@ -315,9 +316,8 @@ p.title_text{
     .restau-card-name{
         display: flex;
         width: 50%;
-        justify-content: space-between;
-        
-    }
+        justify-content: space-between;        
+    
 
         .restau-card-name-title{
             margin-left: 12%;
@@ -328,6 +328,7 @@ p.title_text{
             font-size: 1.6em;
             font-weight: bolder;          
         }
+    }
 }
 
 
@@ -336,8 +337,7 @@ p.title_text{
 .btn-heart{
     width: 30%;
     margin-top: 12%;
-    margin-right: -25%;
-      
+    margin-right: -25%;      
 }
 
 .fa-heart{

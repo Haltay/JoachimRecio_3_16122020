@@ -243,7 +243,7 @@ p.title_text
 {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
@@ -254,12 +254,13 @@ p.title_text
 
 .restau-card{
     .restau-card-img{     
-        min-width: 52vh;        
+        min-width: 56.35vh;       
         display: flex;       
     
         .restau-card_img{                    
             height: 100%;
             max-height: 190px;
+            max-width: 600px;
             object-fit: cover;       
             border-radius: 20px;         
         }
@@ -284,7 +285,7 @@ p.title_text
 
 .restau-card{
     .restau-card-name{
-        width: 100%;
+        max-width: 600px;
         display: flex;
         justify-content: space-between;
         padding-left: 13px;        
@@ -421,6 +422,12 @@ footer
 
     // btn coeur card
 
+.fa-heart:hover {
+        @include heart-animation;
+        @include cursor-layout;
+        transition-delay:0.1s;
+  }
+
 .btn-heart-card{
     margin-right: 5%;
     margin-top: 6%;
@@ -470,15 +477,16 @@ footer
     margin-bottom: 7%;
 
     .menu-card_title{
-        width: 120%;
+        width: 90%;
         font-size: 1.3em;
+        margin-left: 11.5%;
         margin-bottom: 5%;
-        padding-bottom: 1%;
-        
+        padding-bottom: 1%;        
         border-bottom: solid $color-tertiary 2px;
     }
 
     .menu-card-plat{
+        display: flex;
         width: 75%;
         margin-left: 20%;
         @include menu-card-plat;
