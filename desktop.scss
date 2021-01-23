@@ -34,7 +34,7 @@ body
 .loader-spinner {
     @include loading-spiner;
     @include center-object;
-    margin-top: 26%;
+    margin-top: 12.3%;
   }
  
 @keyframes spin {
@@ -43,7 +43,7 @@ body
   } 
 
 .loader-text{
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-align: center;
     margin-top: 5%;
 }
@@ -144,6 +144,7 @@ header
     font-size: 1.6em;
     width: 100%;
     height: 60px;
+    margin-right: 0;
     padding-top: 2%;
     padding-bottom: 4%;
     @include center-div;
@@ -170,35 +171,23 @@ p.title_text{
     margin-bottom: 4%;
     display: flex;
     flex-wrap: wrap;
-    @include center-div;
-
-        .children:nth-of-type(1){
-            flex: 1 100%;
-        }
-        .children:nth-of-type(2){
-            flex: 1;
-        }
-        .children:nth-of-type(3){
-            flex: 1;
-        }
-        .children:nth-of-type(4){
-            flex: 1;
-        }
+    @include center-div;        
 }
 
 .manual-card{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap; 
     width: 30%;
     margin-top: 1%;
     @include center-div;
 
     .manual-card_number{
-        width: 62%;
+        width: 11%;
         z-index: 3;
         background-color: $color-primary;        
-        height: 35px;
-        line-height: 35px;
+        height: 45px;
+        line-height: 45px;
         @include center-object;
         vertical-align: middle;
         border-radius: 50%;
@@ -429,8 +418,7 @@ footer
 
 .header-card{
     display: flex;
-    @include center-div;
-    padding-left: -30%;
+    @include center-div;    
 }
     
 .arrowback{   

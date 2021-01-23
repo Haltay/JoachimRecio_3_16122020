@@ -242,7 +242,7 @@ p.title_text
 {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -254,13 +254,13 @@ p.title_text
 .restau-card{
     .restau-card-img{     
         @include  size-img-card;
+        width: 100%;
         display: flex;       
     
         .restau-card_img{
-            max-width: 373px;               
             max-height: 170px;
             object-fit: cover;       
-            border-radius: 20px;       
+            border-radius: 20px;               
         }
 
         .restau-card-new{
