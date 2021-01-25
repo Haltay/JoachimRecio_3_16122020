@@ -82,7 +82,6 @@
         margin-bottom: 6%;
         padding: 0 0 0 3%;
     } 
-
 }
 
 // Débordement div
@@ -149,16 +148,4 @@
         width: 100px;
         height: 100px;
         animation: spin 2s linear;
-}
-
-
-// taille images restau-card
-    //mobile
-    
-@mixin size-img-card {
-
-
-    @media (max-width: 369px) { 
-        min-width: 43.8vh;
-    } 
 }

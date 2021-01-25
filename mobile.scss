@@ -6,6 +6,10 @@
     font-family: 'Shrikhand', cursive, sans-serif;
 }
 
+a{
+    width: 100%;
+}
+
 body
 {
     font-family: 'Roboto', sans-serif;
@@ -85,9 +89,6 @@ header
     padding-bottom: 1.5%;
     
 }
-    
-
-
 
 //Search
 .search
@@ -173,7 +174,7 @@ p.title_text
     @include center-div;
     height: 100px;   
 
-    .manual-card_number{
+    &_number{
         z-index: 3;
         background-color: $color-primary;
         width: 28px;
@@ -188,7 +189,7 @@ p.title_text
         margin-left: 0;
     }
 
-    .manual-card-ft{
+    &-ft{
         z-index: 2;
         display: flex;
         background-color: $color-background-grey;
@@ -198,22 +199,21 @@ p.title_text
         justify-content: flex-start;
         border-radius: 20px;
         @include box-shadow
+
+        &_font {
+            color: #8d8d8d;
+            font-size: 21px;
+            padding-left: 35px;   
+        }
+    
+        &_text {
+            font-size: 1.1em;
+            padding-left: 20px;
+            font-weight: bold;
+        }
     }
 }
 
-.manual-card-ft {
-    .manual-card-ft_font {
-        color: #8d8d8d;
-        font-size: 21px;
-        padding-left: 35px;       
-    }
-
-    .manual-card-ft_text {
-        font-size: 1.1em;
-        padding-left: 20px;
-        font-weight: bold;
-    }
-}
 
 .manual-card-ft:hover {
     background-color: $color-background-btn-hover;
@@ -252,47 +252,47 @@ p.title_text
 }
 
 .restau-card{
-    .restau-card-img{     
-        @include  size-img-card;
+    &-img{  
         width: 100%;
-        display: flex;       
+        display: flex;
+    }     
     
-        .restau-card_img{
-            max-height: 170px;
-            object-fit: cover;       
-            border-radius: 20px;               
-        }
+    &_img{
+        max-height: 170px;
+        object-fit: cover;       
+        border-radius: 20px;               
+    }
 
-        .restau-card-new{
-            font-size: 0.9em;
-            height: 100%;            
-            padding: 1.5% 3% 1.5% 3%;
-            margin-top: 15px;
-            margin-left: -90px;
-            font-weight: bold;
-            background-color: $color-background-new;
-            color: $color-background-new_title;
-            border-radius: 5%;
-        }
+    &-new{
+        font-size: 0.9em;
+        height: 100%;            
+        padding: 1.5% 3% 1.5% 3%;
+        margin-top: 15px;
+        margin-left: -90px;
+        font-weight: bold;
+        background-color: $color-background-new;
+        color: $color-background-new_title;
+        border-radius: 5%;
+    }
 
-        .restau-card-nonew{
-            display: none;
-        }
+    &-nonew{
+        display: none;
     }
 }
 
 .restau-card{
-    .restau-card-name{
+    &-name{
         width: 100%;
         max-width: 373px; 
         display: flex;
         justify-content: space-between;
         padding-left: 13px;        
-    }
-        .restau-card-name_title{
+    
+        &_title{
             @include title-in-card; 
             margin-bottom: -10px;              
         }
+    }
 }
 
 
@@ -341,22 +341,22 @@ footer
     p{
         font-family: 'Shrikhand', cursive, sans-serif;
         font-size: 1.1em;
-    }
-    
+    }    
 
-    .about-list-font{
+    &-list-font{
         display: flex;
         padding-bottom: 3%;
         font-weight: 500;
     }    
-        .about-list_text {
-            padding-left: 3%;
-        }
-            .partner {
-                margin-left: -0.7%;
-            }
 
-    .about-list-nofont{
+    &-list_text {
+        padding-left: 3%;
+    }
+        .partner {
+            margin-left: -0.7%;
+        }
+
+    &-list-nofont{
         padding-bottom: 3%;
         margin-left: -3%;
         color: #f2f2f2;
@@ -450,7 +450,7 @@ footer
     padding: 0 5% 0 5%;
     margin-bottom: 7%;
 
-    .menu-card_title{
+    &_title{
         width: 13%;
         font-size: 1.1em;
         margin-bottom: 5%;
@@ -458,33 +458,33 @@ footer
         border-bottom: solid $color-tertiary 2px;
     }
 
-    .menu-card-plat{
+    &-plat{
         @include menu-card-plat;
         @include box-shadow;            
         
-            .menu-card-plat-name{
+            &-name{
                 width: 260px;
                 @include no-flooding;  
-            }
 
-            .menu-card-plat-name_name{
-                margin-bottom: 0;
-                @include title-in-card; 
-                @include no-flooding;             
-            }
+                &_name{
+                    margin-bottom: 0;
+                    @include title-in-card; 
+                    @include no-flooding;             
+                }
 
-            .menu-card-plat-name_description{
-                font-size: 0.9em;
-                margin-top: 0;            
-                padding-top: 3%;
-                @include no-flooding;
+                &_description{
+                    font-size: 0.9em;
+                    margin-top: 0;            
+                    padding-top: 3%;
+                    @include no-flooding;
+                }
             }
         
-            .menu-card-plat-price{    
+            &-price{    
                 width: 50px;
                 text-align: center;         
             
-                .menu-card-plat-price_money{
+                &_money{
                     font-weight: bold;
                 }
             }

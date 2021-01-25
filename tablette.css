@@ -2,6 +2,10 @@
   font-family: 'Shrikhand', cursive, sans-serif;
 }
 
+a {
+  width: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -263,7 +267,7 @@ p.title_text {
   height: 100px;
 }
 
-.manual-card .manual-card_number {
+.manual-card_number {
   z-index: 3;
   background-color: #9356DC;
   width: 28px;
@@ -280,7 +284,7 @@ p.title_text {
   margin-left: 0;
 }
 
-.manual-card .manual-card-ft {
+.manual-card-ft {
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,13 +306,13 @@ p.title_text {
           box-shadow: 5px 15px 21px -13px #000000;
 }
 
-.manual-card-ft .manual-card-ft_font {
+.manual-card-ft_font {
   color: #8d8d8d;
   font-size: 21px;
   padding-left: 22%;
 }
 
-.manual-card-ft .manual-card-ft_text {
+.manual-card-ft_text {
   text-align: left;
   font-size: 1.1em;
   margin-left: 12%;
@@ -351,14 +355,14 @@ p.title_text {
           box-shadow: 5px 15px 21px -13px #000000;
 }
 
-.restau-card .restau-card-img {
+.restau-card-img {
   min-width: 56.35vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.restau-card .restau-card-img .restau-card_img {
+.restau-card_img {
   height: 100%;
   max-height: 190px;
   max-width: 600px;
@@ -367,7 +371,7 @@ p.title_text {
   border-radius: 20px;
 }
 
-.restau-card .restau-card-img .restau-card-new {
+.restau-card-new {
   font-size: 0.9em;
   height: 100%;
   padding: 1.5% 3% 1.5% 3%;
@@ -379,11 +383,11 @@ p.title_text {
   border-radius: 5%;
 }
 
-.restau-card .restau-card-img .restau-card-nonew {
+.restau-card-nonew {
   display: none;
 }
 
-.restau-card .restau-card-name {
+.restau-card-name {
   max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,12 +398,12 @@ p.title_text {
   padding-left: 13px;
 }
 
-.restau-card .restau-card-name-title {
+.restau-card-name-title {
   margin-left: 5%;
   margin-top: -1%;
 }
 
-.restau-card .restau-card-name_title {
+.restau-card-name_title {
   font-size: 1.3em;
   font-weight: bolder;
   margin-bottom: -10px;
@@ -637,7 +641,7 @@ footer {
   margin-bottom: 7%;
 }
 
-.menu-card .menu-card_title {
+.menu-card_title {
   width: 90%;
   font-size: 1.3em;
   margin-left: 11.5%;
@@ -646,7 +650,7 @@ footer {
   border-bottom: solid #99E2D0 2px;
 }
 
-.menu-card .menu-card-plat {
+.menu-card-plat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,7 +661,7 @@ footer {
 }
 
 @media (min-width: 1490px) {
-  .menu-card .menu-card-plat {
+  .menu-card-plat {
     height: 110px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -676,7 +680,7 @@ footer {
 }
 
 @media (min-width: 641px) and (max-width: 1489px) {
-  .menu-card .menu-card-plat {
+  .menu-card-plat {
     height: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -695,7 +699,7 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .menu-card .menu-card-plat {
+  .menu-card-plat {
     height: 75px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -713,7 +717,7 @@ footer {
   }
 }
 
-.menu-card .menu-card-plat .menu-card-plat-name {
+.menu-card-plat-name {
   width: 300px;
   margin-left: 3%;
   overflow: hidden;
@@ -721,7 +725,7 @@ footer {
   text-overflow: ellipsis;
 }
 
-.menu-card .menu-card-plat .menu-card-plat-name_name {
+.menu-card-plat-name_name {
   margin-bottom: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -729,27 +733,27 @@ footer {
 }
 
 @media (min-width: 1490px) {
-  .menu-card .menu-card-plat .menu-card-plat-name_name {
+  .menu-card-plat-name_name {
     font-size: 1.4em;
     font-weight: bolder;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1489px) {
-  .menu-card .menu-card-plat .menu-card-plat-name_name {
+  .menu-card-plat-name_name {
     font-size: 1.2em;
     font-weight: bolder;
   }
 }
 
 @media (max-width: 640px) {
-  .menu-card .menu-card-plat .menu-card-plat-name_name {
+  .menu-card-plat-name_name {
     font-size: 1.1em;
     font-weight: bolder;
   }
 }
 
-.menu-card .menu-card-plat .menu-card-plat-name_description {
+.menu-card-plat-name_description {
   font-size: 1em;
   margin-top: 0;
   padding-top: 3%;
@@ -758,12 +762,12 @@ footer {
   text-overflow: ellipsis;
 }
 
-.menu-card .menu-card-plat .menu-card-plat-price {
+.menu-card-plat-price {
   width: 50px;
   text-align: center;
 }
 
-.menu-card .menu-card-plat .menu-card-plat-price .menu-card-plat-price_money {
+.menu-card-plat-price_money {
   font-weight: bold;
 }
 
