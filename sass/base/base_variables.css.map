@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "fonctions.scss"
+        "base_variables.scss"
     ],
     "names": [],
-    "file": "fonctions.css"
+    "file": "base_variables.css"
 }

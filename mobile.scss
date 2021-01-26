@@ -17,9 +17,10 @@ body
     background-color: #ffffff;
 }
 
-@import "./sass/utils/mixin";
-@import "./sass/utils/variables";
-
+@import "./sass/pages/pages-menu_mixin.scss";
+@import "./sass/base/base_variables";
+@import "./sass/base/base_mixin";
+@import "./sass/composants/composants_mixin.scss"
 
 // PAGE ACCUEIL
 
